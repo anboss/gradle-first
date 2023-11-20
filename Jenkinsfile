@@ -25,6 +25,7 @@ pipeline {
 					docker run \
 						--env SNYK_TOKEN \
 						-v "C:/ProgramData/Jenkins/.jenkins/workspace/gradle-first_master:/app" \
+      						--security-opt="seccomp=unconfined" \
 						snyk/snyk:gradle
 					docker ps -e
 					exit \$?
