@@ -17,14 +17,15 @@ pipeline {
 				}
             }
         }
-		stage('Snyk Scan'){
+	stage('Snyk Scan'){
             steps{
                 script {
 					sh """
 					set -x
+     					ls -ltr ${WORKSPACE}
 					docker run \
 						--env SNYK_TOKEN \
-						-v "C:/Users/an_bo/Documents/workspace-spring-tool-suite-4-4.20.0.RELEASE/gradle-first:/app" \
+						-v "${WORKSPACE}:/app" \
 						snyk/snyk:gradle-jdk8
 					docker ps -e
 					exit \$?
