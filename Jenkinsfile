@@ -16,12 +16,6 @@ pipeline {
 					sh "gradle clean test"
 				}
             }
-            post {
-                success {
-                    junit '**/target/surefire-reports/TEST-*.xml'
-                    archiveArtifacts 'target/*.jar'
-                }
-            }
         }
 		stage('Snyk Scan'){
             steps{
