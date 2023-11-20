@@ -25,7 +25,6 @@ pipeline {
 					docker run \
 						--env SNYK_TOKEN \
 						-v "C:/myproject/gradle-first:/app" \
-      						-v "C:/myproject/gradle-first/gradlew.*:/bin/sh" \
       						--security-opt="seccomp=unconfined" \
 						snyk/snyk:gradle
 					docker ps -e
