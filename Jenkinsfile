@@ -1,4 +1,4 @@
-@Library('my-shared-library') _
+.@Library('my-shared-library') _
 
 pipeline {
     agent any
@@ -22,10 +22,10 @@ pipeline {
                 script {
 					sh """
 					set -x
-     					ls -ltr ${WORKSPACE}
+     					ls -ltr ${env.WORKSPACE}
 					docker run \
 						--env SNYK_TOKEN \
-						-v "${WORKSPACE}:/app" \
+						-v "${env.WORKSPACE}:/app" \
 						snyk/snyk:gradle-jdk8
 					docker ps -e
 					exit \$?
