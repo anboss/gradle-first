@@ -3,7 +3,7 @@
 pipeline {
     agent any
     tools {
-        maven "MyGradle"
+        gradle "MyGradle"
     }
     environment {
         GIT_USER = 'anboss'
