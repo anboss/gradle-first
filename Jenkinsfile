@@ -22,10 +22,9 @@ pipeline {
                 script {
 					sh """
 					set -x
-     					ls -ltr ${env.WORKSPACE}
 					docker run \
 						--env SNYK_TOKEN \
-						-v "${env.WORKSPACE}:/app" \
+						-v "C:/ProgramData/Jenkins/.jenkins/workspace/gradle-first_master:/app" \
 						snyk/snyk:gradle-jdk8
 					docker ps -e
 					exit \$?
