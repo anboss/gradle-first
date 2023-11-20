@@ -25,7 +25,7 @@ pipeline {
 					docker run \
 						--env SNYK_TOKEN \
 						-v "C:/ProgramData/Jenkins/.jenkins/workspace/gradle-first_master:/app" \
-						snyk/snyk:gradle-jdk8
+						snyk/snyk:gradle
 					docker ps -e
 					exit \$?
 					"""
