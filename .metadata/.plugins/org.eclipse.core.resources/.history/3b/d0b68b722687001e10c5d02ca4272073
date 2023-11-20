@@ -1,0 +1,9 @@
+package com.example.demo;
+
+public class GradleFirstController {
+	
+	@RequestMapping("/greeting")
+	public @ResponseBody String greeting() {
+		return "Hello from gradle first";
+	}
+}
