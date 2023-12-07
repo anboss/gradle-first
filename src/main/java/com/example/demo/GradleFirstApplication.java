@@ -8,6 +8,7 @@ public class GradleFirstApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(GradleFirstApplication.class, args);
+		String password="test";
 	}
 
 }
