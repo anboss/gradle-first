@@ -10,7 +10,7 @@ public class GradleFirstController {
 	@RequestMapping("/greeting")
 	public @ResponseBody String greeting() {
 		String password="test";
-		return "Hello from gradle first";
 		String sql = "SELECT * FROM users WHERE username='' AND password='" + password + "'";
+		return "Hello from gradle first" + password;
 	}
 }
