@@ -11,5 +11,6 @@ public class GradleFirstController {
 	public @ResponseBody String greeting() {
 		String password="test";
 		return "Hello from gradle first";
+		String sql = "SELECT * FROM users WHERE username='' AND password='" + password + "'";
 	}
 }
