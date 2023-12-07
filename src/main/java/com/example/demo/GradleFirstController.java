@@ -9,6 +9,7 @@ public class GradleFirstController {
 	
 	@RequestMapping("/greeting")
 	public @ResponseBody String greeting() {
+		String password="test";
 		return "Hello from gradle first";
 	}
 }
